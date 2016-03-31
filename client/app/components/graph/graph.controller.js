@@ -1,37 +1,26 @@
+import _ from 'lodash'
+
 class GraphController {
-  constructor(DemographicsSrv) {
-    this.DemographicsSrv = DemographicsSrv;
-    this.getData();
+  constructor() {
+    this.prepareData();
+    console.log('_ ', _);
+    console.log(this.demodata);
   }
 
-  getData() {
-    this.DemographicsSrv.getDemoData().then((res) => {
+  prepareData() {
+    let series = [];
+    let labels = [];
+    this.demodata.map(function (item) {
+      let indexes = item.variables.indexes;
 
-      let graphdata = res.reduce(function (memo, item) {
-        let series = [];
-        let indexes = item.variables.indexes;
-        let key;
+      labels = _.keys(indexes);
+      series.push(_.values(indexes));
+    });
 
-        for (key in indexes) {
-          if (indexes.hasOwnProperty(key)) {
-            series.push(indexes[key]);
-          }
-        }
-        console.log(memo, series);
-        memo.push(series);
-
-        return memo;
-      }, []);
-
-      let graphlables = Object.keys(res[0].variables.indexes);
-
-
-      this.labels = graphlables;
-      this.demodata = graphdata;
-    })
+    this.series = series;
+    this.labels = labels;
   }
 }
 
-GraphController.$inject = ['DemographicsSrv'];
 
 export default GraphController;

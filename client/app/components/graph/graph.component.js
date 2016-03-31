@@ -3,8 +3,9 @@ import controller from './graph.controller';
 import './graph.styl';
 
 let graphComponent = {
-  restrict: 'E',
-  bindings: {},
+  bindings: {
+    demodata: '='
+  },
   template,
   controller,
   controllerAs: 'vm'
