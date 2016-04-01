@@ -1,5 +1,6 @@
 class HomeController {
   constructor(DemographicsSrv) {
+    'ngInject';
     this.DemographicsSrv = DemographicsSrv;
     this.demodata = [];
     this.getData();
@@ -12,5 +13,4 @@ class HomeController {
   }
 }
 
-HomeController.$inject = ['DemographicsSrv'];
 export default HomeController;

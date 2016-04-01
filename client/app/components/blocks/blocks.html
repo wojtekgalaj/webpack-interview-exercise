@@ -1,0 +1,14 @@
+<div class="population-blocks">
+  <div class="population-block block{{$index}}"
+    ng-repeat="block in vm.demodata">
+    <h3 ng-if="$index === 0">Reference Area</h3>
+    <h3 ng-if="$index > 0">Compared Area {{$index}}</h3>
+    <div class="population">
+      <span>{{block.variables.population | number}}</span>
+      <small>Population</small>
+    </div>
+    <div class="address">
+      {{block.address}}
+    </div>
+  </div>
+</div>

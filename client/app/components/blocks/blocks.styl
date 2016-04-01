@@ -1,0 +1,46 @@
+@import "../../common/common"
+
+.population-blocks
+  display flex
+  text-align center
+
+.population-block
+  flex-grow 1
+  background $background
+
+.population
+  color white
+  padding 20px
+  span
+    font-size 2em
+  small
+    display block
+
+.block0
+  color $reference
+  .population
+    background $reference
+
+.block1
+  color $compared1
+  .population
+    background $compared1
+
+.block2
+  color $compared2
+  .population
+    background $compared2
+
+.bg0
+  background $reference
+
+.bg1
+  background $compared1
+
+.bg2
+  background $compared2
+
+.address
+  margin 10px
+  color $icons
+  font-size 0.8em

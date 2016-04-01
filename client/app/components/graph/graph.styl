@@ -1,5 +1,7 @@
+@import "../../common/common"
+
 .general-graph-comparison
-  background #f4
+  background $background
   padding 5px
 
 .graph-with-legend
@@ -37,8 +39,8 @@
     margin-right 5px
     background black
   &.reference::before
-    background red
+    background $reference
   &.area1::before
-    background green
+    background $compared1
   &.area2::before
-    background blue
+    background $compared2

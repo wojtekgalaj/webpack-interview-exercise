@@ -7,7 +7,6 @@ import Services from './services/services';
 import AppComponent from './app.component';
 import 'normalize.css';
 
-console.log('XXX ', Chart.name);
 angular.module('app', [
     uiRouter,
     Common.name,
@@ -16,10 +15,16 @@ angular.module('app', [
     Chart.name
   ])
   .config(($locationProvider) => {
-    "ngInject";
+    'ngInject';
     // @see: https://github.com/angular-ui/ui-router/wiki/Frequently-Asked-Questions
     // #how-to-configure-your-server-to-work-with-html5mode
     $locationProvider.html5Mode(true).hashPrefix('!');
+  })
+  .config((ChartJsProvider) => {
+    'ngInject';
+    ChartJsProvider.setOptions({
+      colours : ['#da2525', '#eb8000', '#1595a2']
+    });
   })
 
   .component('app', AppComponent);

@@ -4,6 +4,13 @@
 </header>
 <main>
   <div>
+    <blocks
+      ng-if="vm.demodata"
+      demodata="vm.demodata"
+    />
+  </div>
+  <hr />
+  <div>
     <graph
       ng-if="vm.demodata"
       demodata="vm.demodata"
