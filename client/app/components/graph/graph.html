@@ -1,13 +1,20 @@
-<div>
-  <pre>
-    series
-    {{vm.series}}
-  </pre>
-  <pre>
-    labels
-    {{vm.labels}}
-  </pre>
-  <canvas id="radar" class="chart chart-radar"
-    chart-data="vm.series" chart-labels="vm.labels">
-  </canvas>
+<div class="general-graph-comparison">
+  <h3>General graph comparison</h3>
+  <div class="graph-with-legend">
+    <div class="graph">
+      <i class="fa fa-download"></i>
+      <canvas id="radar" class="chart chart-radar"
+        chart-data="vm.series" chart-labels="vm.labels">
+      </canvas>
+    </div>
+    <div class="legend">
+      <div class="panel">
+        <ul>
+          <li class="legend-color-reference">Reference area</li>
+          <li class="legend-color-area1">Compared area 1</li>
+          <li class="legend-color-area2">Compared area 2</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
