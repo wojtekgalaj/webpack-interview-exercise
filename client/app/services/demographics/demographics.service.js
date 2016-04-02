@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 let service = function ($q) {
 
   let getDemoData = () => {
@@ -58,7 +56,7 @@ let service = function ($q) {
 
 
     return deferred.promise;
-  }
+  };
 
   return {getDemoData}
 };
