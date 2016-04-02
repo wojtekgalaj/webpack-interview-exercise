@@ -5,6 +5,10 @@ class GraphController {
     this.prepareData();
   }
 
+  capitalize(string) {
+    return string.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+  }
+
   prepareData() {
     // I am assuming the reference object is always sent
     // at position 0 so I will not be figuring that out
@@ -18,7 +22,13 @@ class GraphController {
     });
 
     this.series = series;
-    this.labels = labels;
+    this.labels = this.prettyLabels(labels);
+  }
+
+  prettyLabels(labels) {
+    return labels.map((label) => {
+      return this.capitalize(label.replace('_', ' '));
+    })
   }
 
 }
