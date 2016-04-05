@@ -24,7 +24,10 @@ describe('Graph', () => {
 
   describe('Template', () => {
     // template specs
-    // tip: use regex to ensure correct bindings are used e.g., {{  }}
+    it('pases series and labels to chart component', () => {
+      expect(GraphTemplate).to.match(/chart-data=\"vm\.series\"/g);
+      expect(GraphTemplate).to.match(/chart-labels=\"vm\.labels\"/g);
+    });
   });
 
   describe('Component', () => {
