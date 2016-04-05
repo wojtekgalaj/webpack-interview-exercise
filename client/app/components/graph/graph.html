@@ -12,9 +12,10 @@
     <div class="legend">
       <div class="panel">
         <ul>
-          <li><span class="legend-color reference">Reference area</span></li>
-          <li><span class="legend-color area1">Compared area 1</span></li>
-          <li><span class="legend-color area2">Compared area 2</span></li>
+          <li ng-repeat="legend in vm.series">
+            <span ng-if="$index === 0" class="legend-color reference">Reference area</span>
+            <span ng-if="$index > 0" class="legend-color area{{$index}}">Compared area {{$index}}</span>
+          </li>
         </ul>
       </div>
     </div>
