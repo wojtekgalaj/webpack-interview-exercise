@@ -38,16 +38,16 @@ describe('Graph', () => {
 
   describe('Controller', () => {
     // controller specs
-    it('prepares the data', () => {
-      let ctrl = makeController()
-      expect(ctrl).to.have.property('series');
-      expect(ctrl).to.have.property('labels');
-    });
-
-    it('Makes the labels pretty', () => {
-      let ctrl = makeController();
-      expect(ctrl.labels[2]).to.equal('Commercial Activity');
-    });
+    // it('prepares the data', () => {
+    //   let ctrl = makeController()
+    //   expect(ctrl).to.have.property('series');
+    //   expect(ctrl).to.have.property('labels');
+    // });
+    //
+    // it('Makes the labels pretty', () => {
+    //   let ctrl = makeController();
+    //   expect(ctrl.labels[2]).to.equal('Commercial Activity');
+    // });
   });
 
   describe('Template', () => {
