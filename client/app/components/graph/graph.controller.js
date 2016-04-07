@@ -15,10 +15,6 @@ class GraphController {
     let series = [];
     let labels = [];
 
-    if (!demodata) {
-      return;
-    }
-
     this.demodata.map(function (item) {
       let indexes = item.variables.indexes;
 
