@@ -1,5 +1,5 @@
 {
-  "name": "ng6-starter",
+  "name": "front end assigment",
   "version": "0.0.1",
   "description": "Starter for Angular + ES6 + (Webpack or JSPM)",
   "main": "index.js",
@@ -54,8 +54,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/angularclass/NG6-starter.git"
+    "url": "https://github.com/wojtekgalaj/webpack-interview-exercise"
   },
-  "author": "AngularClass",
+  "author": "Wojtek Galaj",
   "license": "Apache-2.0"
 }
