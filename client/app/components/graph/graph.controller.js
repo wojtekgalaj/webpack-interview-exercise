@@ -1,7 +1,8 @@
 import _ from 'lodash'
 
 class GraphController {
-  constructor() {
+  constructor(testData) {
+    this.testData = testData;
     this.prepareData();
   }
 
@@ -15,7 +16,9 @@ class GraphController {
     let series = [];
     let labels = [];
 
-    this.demodata.map(function (item) {
+    let mapOver = this.testData || this.demodata;
+
+    mapOver.map(function (item) {
       let indexes = item.variables.indexes;
 
       labels = _.keys(indexes);
